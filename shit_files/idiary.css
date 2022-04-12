@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/* idiary */
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+.idiary{	
+	color: #393939;		
+	min-height: 100%;
+	font-family: arial, sans-serif;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ebecec), to(#d0d4d7));
+}
+	.idiary-h{
+		padding: 10px;				
+		margin: 0 auto;
+		max-width: 1010px;
+		overflow: hidden;		
+	}
+	.idiary-llp{
+		position: relative;
+		margin-bottom: 20px;
+		border: solid 1px #d8d8d8;
+		-webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.27);
+	}
+	.idiary-lrp{
+		position: relative;
+		border: solid 1px #d8d8d8;
+		-webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.27);
+	}
+/* top usability panel */
+.top-panel{
+	font-size: 12px;
+	margin-bottom: 8px;
+	font-family: 'PT Sans', sans-serif;
+}
+	.top-panel:after{
+		height: 0;
+		clear: both;
+		content: ".";
+		display: block;
+		visibility: hidden;
+	}
+	.top-panel-user{
+		width: 40%;
+		float: left;
+		font-size: 15px;
+		margin-top: -6px;
+		text-align: left;
+		font-weight: bold;
+	}
+		.top-panel-user span{
+			display: block;
+			font-size: 12px;
+			font-weight: normal;
+		}
+	.top-panel-filter{
+		width: 60%;
+		float: right;
+		text-align: right;
+		white-space: nowrap;
+	}
+/* week selector */
+.week-selector{
+	top: -8px;
+	color: #313131;
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+	padding-bottom: 2px;
+	vertical-align: middle;
+}
+	.week-selector span{
+		left: -4px;
+		width: 100px;
+		font-weight: bold;
+		font-style: italic;
+		position: relative;
+		display: inline-block;
+	}
+		.week-selector span:after{
+			content: "";
+			height: 1px;
+			width: 100px;
+			bottom: 2px;
+			display: block;
+			position: absolute;
+			background: #535456;
+		}
+	.week-selector-controls{
+		top: -4px;
+		width: 100%;
+		position: absolute;
+	}
+		.week-selector-controls a:first-child{
+			float: left;
+			margin-left: 0;
+		}
+		.week-selector-controls a:last-child{
+			float: right;
+		}
+/* time-table */
+.tt{
+	padding: 20px;
+	position: relative;
+	background-color: #f5f6f8;
+}
+	.tt table{
+		width: 100%;
+		border-collapse: collapse;
+	}
+		/* base header */
+		.tt thead td{
+			padding: 2px 0;
+			font-size: 14px;
+			text-align: center;
+			border-top:  solid 3px #545454;
+			border-bottom:  solid 3px #545454;
+		}
+			.tt thead td div{
+				padding: 2px 3px;
+				border-left: solid 1px #545454;
+			}
+			.tt thead td:first-child div{
+				border-left: 0;
+				text-align: left;
+			}
+				.tt thead td div img{
+					display: block;
+					margin: 0 auto;
+				}
+		/* base body */
+		.tt tbody td{
+			font-size: 14px;
+			border: solid 1px #545454;
+		}
+		/* setup our cols width */
+		.tt .tt-days{
+			padding-right: 5px;
+		}
+		.tt .tt-subj{
+			width: 25%;
+		}
+		.tt .tt-task{
+			width: 70%;
+		}
+			.tt tbody td div{
+				padding: 0 6px;
+				color: #006ac3;
+				font-size: 14px;
+				min-height: 20px;
+				font-style: italic;
+				font-family: 'trebuchet ms', sans-serif;
+			}
+			.tt tbody td:first-child{
+				border-left: 0;
+			}
+			.tt tbody td:last-child{
+				border-right: 0;
+			}
+				/* days titles */
+				.tt .tt-days > div{
+					padding: 0;
+					margin: 0 auto;
+				}
+				.tt .tt-days-mo{
+					width: 13px;
+					height: 130px;
+					background: url(../images/idiary/mo.png);
+				}
+				.tt .tt-days-tu{
+					width: 13px;
+					height: 100px;
+					background: url(../images/idiary/tu.png);
+				}
+				.tt .tt-days-we{
+					width: 14px;
+					height: 85px;
+					background: url(../images/idiary/wd.png);
+				}
+				.tt .tt-days-th{
+					width: 13px;
+					height: 95px;
+					background: url(../images/idiary/th.png);
+				}
+				.tt .tt-days-fr{
+					width: 13px;
+					height: 101px;
+					background: url(../images/idiary/fy.png);
+				}
+				.tt .tt-days-sa{
+					width: 14px;
+					height: 98px;
+					background: url(../images/idiary/st.png);
+				}
+					.tt .tt-days div > span{
+						top: 18px;
+						left: -2px;
+						display: block;
+						color: #313131;
+						position: relative;
+						-webkit-transform: rotate(-90deg);
+					}
+			/* rows separator */
+			.tt-separator td{
+				padding: 0;
+				height: 1px;
+				background: #545454;
+			}
+			/* markup */
+			.tt .tt-mark{
+				text-align: center;
+			}
+				.tt .tt-mark div{
+					font-size: 16px;
+				}
+				.tt .tt-mark-bad > div{
+					color: red;
+				}
+/* globals */
+a.g-button{
+	color: #313131;
+	font-size: 13px;
+	margin-left: 6px;
+	padding: 4px 22px;
+	font-weight: bold;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+	border: solid 1px #d0d0d0;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.54, rgb(250,250,250)),
+		color-stop(0.41, rgb(224,224,224))
+	);
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
+}
+a.g-button-blue{
+	color: #006ac3;
+	font-size: 11px;
+	margin-left: 6px;
+	padding: 4px 22px;
+	font-weight: bold;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+	border: solid 1px #d0d0d0;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.54, rgb(250,250,250)),
+		color-stop(0.41, rgb(224,224,224))
+	);
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
+}
+a.g-blue{
+	color: #006ac3;
+}
